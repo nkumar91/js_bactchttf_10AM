@@ -110,7 +110,7 @@ var f = arr.entries()
 // console.log(f.next().value)
 
 for(let [x,y] of f){
-    console.log(x,y)
+    console.log(x,y) 
 }
 
 
