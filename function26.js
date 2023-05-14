@@ -87,19 +87,19 @@
 //     console.log(ele.reduce((a,b)=>a+b))
 // })
 
-var f = Promise.resolve("hello world")
-var p = new Promise(function(resolve){
+// var f = Promise.resolve("hello world")
+// var p = new Promise(function(resolve){
  
-        resolve("hello world")
+//         resolve("hello world")
    
-})
-var p1= new Promise(function(resolve){
-    setTimeout(()=>{
-        resolve("hello kumar")
-    },2000)
-})
+// })
+// var p1= new Promise(function(resolve){
+//     setTimeout(()=>{
+//         resolve("hello kumar")
+//     },2000)
+// })
 
-var f = Promise.all([p1,p])
-f.then(ele=>{
-    console.log(ele)
-})
+// var f = Promise.all([p1,p])
+// f.then(ele=>{
+//     console.log(ele)
+// })
