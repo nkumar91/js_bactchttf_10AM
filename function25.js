@@ -5,7 +5,6 @@
 //         sum+=i
 //     }
 //     resolve(sum)
-
 // })
 
 
@@ -41,3 +40,19 @@
 // Promise.all()
 // Promise.any()
 // Promise.allSettled()
+
+
+// async function ff(){
+//     return "hello"
+// }
+// async function dd(){
+//     return "world"
+// }
+
+// var f = Promise.resolve(ff())
+// f.then(ele=>{
+//     console.log(ele)
+// })
+// Promise.allSettled([ff(),dd()]).then(ele=>{
+//     console.log(ele.status)
+// })
