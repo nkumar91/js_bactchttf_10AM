@@ -29,6 +29,20 @@ var arr = [
 // myArr.push({class:12,totalMarks:TwelveSum})
 // console.log(myArr)
 
+
+var arr = [
+    {name:"Mukesh",class:10,totalMarks:200},
+    {name:"Abc",class:12,totalMarks:260},
+    {name:"Xyz",class:12,totalMarks:210},
+    {name:"rahul",class:10,totalMarks:450},
+    {name:"Dilip",class:12,totalMarks:310},
+    {name:"Dilip",class:6,totalMarks:310},
+    {name:"Dilip",class:6,totalMarks:389},
+    {name:"lakshay",class:10,totalMarks:250},
+    {name:"Dukan",class:12,totalMarks:340},
+    {name:"makkan",class:10,totalMarks:200}
+
+]
 arr.sort(function(a,b){
     if(a.class > b.class){
         return 1
@@ -41,8 +55,6 @@ arr.sort(function(a,b){
     }
 
 })
-
-
 var myArr = []
 var totalSum = 0;
 arr.forEach(function(ele,index){
