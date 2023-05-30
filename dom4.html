@@ -86,12 +86,13 @@
 
         function deleteKaro(dataArr){
             var deleteKaro = document.querySelectorAll(".delete_karo")
+            var al = document.querySelectorAll(".l")
             deleteKaro.forEach((ele,index)=>{
                 ele.addEventListener('click',()=>{
-                    samunder_ke_lootere.childNodes[index].remove()
-                    dataArr.splice(index,1);
                     console.log(index,dataArr)
-                  //  input.value = dataArr.join(",")
+                    al[index].remove();
+                    dataArr.splice(index,1);
+                    input.value = dataArr.join(",")
                 })
             })
         }
