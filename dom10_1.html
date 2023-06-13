@@ -24,6 +24,27 @@
             visibility: hidden;
         }
 
+        .main3{
+            width: 100%;
+            padding: 30px;
+        }
+        .main3  .first{
+            width: 48%;
+            display: inline-block;
+            height: 300px;
+            background-color: red;
+            visibility: hidden;
+            position: relative;
+        }
+        .main3  .second{
+            width: 48%;
+            display: inline-block;
+            height: 300px;
+            background-color: rgb(53, 6, 180);
+            visibility: hidden;
+            position: relative;
+        }
+
         .anim1{
             animation-name: nichechalo;
             animation-duration: 1s;
@@ -43,6 +64,55 @@
                 opacity: 1;
             }
         }
+
+        .first_anim{
+            animation-name: first;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+            visibility: visible;
+            opacity: 0;
+            
+           
+        }
+
+        .second_anim{
+            animation-name: second;
+            animation-duration: 1s;
+            animation-delay: 1s;
+            animation-timing-function: ease-in;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+            visibility: visible;
+            opacity: 0;
+        }
+
+        @keyframes first {
+                from{
+                    visibility: hidden;
+                    opacity: 0;
+                    left:-20px
+                }
+                to{
+                    visibility: visible;
+                    opacity: 1;
+                    left:0px;
+                }
+        }
+        @keyframes second {
+                from{
+                    visibility: hidden;
+                    opacity: 0;
+                    right:-20px;
+
+                }
+                to{
+                    visibility: visible;
+                    opacity: 1;
+                    right: 0px;
+                }
+        }
     </style>
 </head>
 <body>
@@ -60,14 +130,31 @@
         </p>
     </div>
 
+
+    <div class="main3">
+        <div class="first">
+
+        </div>
+        <div class="second">
+
+        </div>
+    </div>
+
     <script>
+        var main2 = document.querySelector(".main2");
+        var first = document.querySelector(".first");
+        var second = document.querySelector(".second");
         window.onscroll = function(){
-           //  console.log(document.body.scrollTop)
-            var main2 = document.querySelector(".main2");
-            if(document.body.scrollTop > 10){
-                console.log(true)
-                //main2.classList.add("anim1")
-            }
+         var scroll_no = document.documentElement.scrollTop;
+   
+         if(scroll_no > 300){
+                main2.classList.add('anim1')
+         }
+         if(scroll_no > 600){
+            console.log(scroll_no)
+            first.classList.add("first_anim")
+            second.classList.add("second_anim")
+         }
             
         }
     </script>
